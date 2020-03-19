@@ -7,7 +7,7 @@ const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const load = document.getElementById("load");
 
-const DELAY = 200; // ms
+const DELAY = 2000; // ms
 
 const filename = '10KwithErrors.txt'
 // const filename = 'test.txt'
@@ -16,6 +16,7 @@ var started = false;
 //var manuallyStopped = true;
 
 var errors = [0, 1, 1, 1, 0];
+// ready, power off, network off, air off, Estop
 
 var ledStates = {
   "air" : 0,
