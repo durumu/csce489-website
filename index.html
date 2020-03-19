@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Dryer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>  
+
+  <body>
+    <header>
+      <h1>DRYER</h1>
+    </header>
+      <div class="bigger-flex">
+    <textarea id="screen" rows="16" cols="29" readonly="true" style="resize:none;overflow:hidden;" >
+Ready
+Please Wait..
+    </textarea>
+          
+        <div class="flex-buttons">
+            <button class="start_button" id="start">Start</button>
+            <button class="stop_button" id="stop">Stop</button>
+            <button class="load_button" id="load">Load</button>
+        </div>
+          <div class = "load-light"> </div>
+          <div class = "led-air-green"></div>
+          <div class = "led-communication-red"></div>
+          <div class = "led-power-red"></div>
+          <div class = "led-off-comm"></div>
+          <div class = "led-off-power"></div>
+          <div class = "led-off-load"></div>
+          <div class = "led-off-air"> </div>
+          <div class = "led-off-manager"></div>
+          <div class = "led-on-manager"></div>
+          <div class = "led-off-Stop"></div>
+          <div class = "led-on-Stop"></div>
+          <div class = "led-off-Start"></div>
+          <div class = "led-on-Start"></div>
+          <img class = "manager-icon" src="manager.png">
+      </div>
+        <div class = "flex-lights">
+          <div class="led-box">
+              <div class="led-air-red"></div>
+            </div>
+          <div class = "led-box-">
+              <div class = "led-communication-green"></div>  
+            </div>
+          <div class = "led-box">
+              <div class = "led-power-green"></div>  
+            </div>
+            
+        </div>
+          
+        
+        
+        <div class = "flex-icons">
+          <img class = "images" src="fan_icon.png">
+            <img class = "images" src="connection_icon.png">
+          <img class = "images" src = "power_icon.png">
+          </div>
+          
+  </body>
+</html>
+
+
+<style type=text/css>
+    button{
+        color:white;
+        width: 50px;
+        height: 50px;
+        text-decoration: none;
+        border:none;
+        margin: 10px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px   9px, black 0 2px 2px;
+    }  
+    .start_button{
+        background:green;
+        order:1;
+    }    
+    .stop_button{
+        background:red;
+        order:2;
+    }
+    .load_button{
+        background:black;
+        order:3;
+    } 
+    .bigger-flex{
+        display: flex;
+        background: lightgrey;
+        height:auto;
+        width:460px;
+    }
+    .flex-buttons{
+        order:4
+        display: flex;
+        width: 100px;
+        flex-direction: column;
+        
+    }
+    .flex-buttons > div{
+        width: 50px;
+        margin: 10px;
+    }
+    
+    .flex-lights{
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        width: 500px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+     
+    }
+    .load-light{
+        position: absolute;
+        top: 244.5px;
+        left: 320px;
+        width: 24px;
+        height: 24px;
+        background-color: yellow;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #E1D657 0 -1px   9px, #FEF8B4  0 2px 12px;
+        border-radius: 50%;
+    }
+    .led-box {
+        height: 30px;
+        width: 30px;
+        margin-left: 50px; 
+    }
+    .led-air-red {
+        margin-left: 0px; 
+        width: 24px;
+        height: 24px;
+        background-color: red;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset darkred 0 -1px   9px, darkred 0 2px 12px;
+        border-radius: 50%;
+        
+    }
+    .led-air-green {
+        position: absolute;
+        top: 342px;
+        left: 58px;
+        width: 24px;
+        height: 24px;
+        background-color: #ABFF00;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px   9px, #89FF00 0 2px 12px;
+        
+    }
+    .led-communication-green { 
+        margin-left: 50px;
+        width: 24px;
+        height: 24px;
+        background-color: #ABFF00;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px   9px, #89FF00 0 2px 12px;
+    }
+    .led-communication-red { 
+        position: absolute;
+        top: 342px;
+        left: 138px;
+        width: 24px;
+        height: 24px;
+        background-color: red;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset darkred 0 -1px   9px, darkred 0 2px 12px;
+        border-radius: 50%;
+    }
+    
+    .led-power-green {
+        margin-left: 10px;
+        width: 24px;
+        height: 24px;
+        background-color: #ABFF00;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px   9px, #89FF00 0 2px 12px;
+    }
+    .led-power-red {
+        position: absolute;
+        top: 342px;
+        left: 222px;
+        width: 24px;
+        height: 24px;
+        background-color: red;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset darkred 0 -1px   9px, darkred 0 2px 12px;
+        border-radius: 50%;
+    }
+    .led-off-air{
+        position: absolute;
+        top: 342px;
+        left: 58px;
+        width: 24px;
+        height: 24px;
+        background-color: #E1E5E7;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #C3C9CC 0 -1px   9px;
+    }
+    .led-off-comm{
+        position: absolute;
+        top: 342px;
+        left: 138px;
+        width: 24px;
+        height: 24px;
+        background-color: #E1E5E7;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #C3C9CC 0 -1px 9px;
+    }
+    .led-off-power{
+        position: absolute;
+        top: 342px;
+        left: 222px;
+        width: 24px;
+        height: 24px;
+        background-color: #E1E5E7;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #C3C9CC 0 -1px   9px;
+    }
+    .led-off-load{
+        position: absolute;
+        top: 244.5px;
+        left: 320px;
+        width: 24px;
+        height: 24px;
+        background-color: #E1E5E7;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #C3C9CC 0 -1px   9px;
+    }
+    .led-off-manager{
+        position: absolute;
+        top: 100.5px;
+        left: 420px;
+        width: 24px;
+        height: 24px;
+        background-color: #E1E5E7;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #C3C9CC 0 -1px   9px;
+    }
+    .led-on-manager{
+        position: absolute;
+        top: 100.5px;
+        left: 420px;
+        width: 24px;
+        height: 24px;
+        background-color: red;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset darkred 0 -1px   9px, darkred 0 2px 12px;
+        border-radius: 50%;
+    }
+    .led-off-Stop{
+        position: absolute;
+        top: 173px;
+        left: 320px;
+        width: 24px;
+        height: 24px;
+        background-color: #E1E5E7;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #C3C9CC 0 -1px   9px;
+    }
+    .led-on-Stop{
+        position: absolute;
+        top: 173px;
+        left: 320px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: orange;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset darkorange 0 -1px   9px, darkorange  0 2px 12px;
+    }
+    .led-off-Start{
+        position: absolute;
+        top: 102px;
+        left: 320px;
+        width: 24px;
+        height: 24px;
+        background-color: #E1E5E7;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #C3C9CC 0 -1px   9px;
+    }
+    .led-on-Start{
+        position: absolute;
+        top: 102px;
+        left: 320px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: orange;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset darkorange 0 -1px   9px, darkorange  0 2px 12px;
+    }
+    .flex-icons{
+        order:3
+        display: flex;
+        width: 300px;
+        flex-direction: row;
+        
+    }
+    .manager-icon{
+        position: absolute;
+        top: 98px;
+        left: 380px;
+        width: 30px;
+        height: 30px;
+    }
+    .images{
+        margin-left: 47px;
+        height:30px;
+        width: 30px;
+    }
+    
+</style>
+<script src=script.js></script>
