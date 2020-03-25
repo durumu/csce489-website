@@ -12,17 +12,18 @@
     <header>
       <h1>DRYER</h1>
     </header>
-      <div class="bigger-flex">
-    <textarea id="screen" rows="16" cols="29" readonly="true" style="resize:none;overflow:hidden;" >
+      <div class="bigger-flex" role="application">
+    <textarea id="screen" rows="16" cols="29" readonly="true" style="resize:none;overflow:hidden;" aria-live="polite" role="log">
 Ready
 Please Wait..
     </textarea>
           
-        <div class="flex-buttons">
+        <div class="flex-buttons" id="buttons" role="menu" aria-owns="led-array">
             <button class="start_button" id="start" role="button">Start</button>
             <button class="stop_button" id="stop" role="button">Stop</button>
             <button class="load_button" id="load" role="button">Load</button>
         </div>
+		<div id="led-array" role="status" aria-controls="buttons">
           <div class = "load-light" id="load-led-on"> </div>
           <div class = "led-air-green" id="air-led-green"></div>
           <div class = "led-communication-red" id="comm-led-red"></div>
@@ -31,22 +32,23 @@ Please Wait..
           <div class = "led-off-power" id="power-led-off"></div>
           <div class = "led-off-load" id="load-led-off"></div>
           <div class = "led-off-air" id="air-led-off"> </div>
-          <div class = "led-off-manager" id="managr-led-off"></div>
-          <div class = "led-on-manager" id="managr-led-on"></div>
-          <div class = "led-off-Stop"></div>
-          <div class = "led-on-Stop"></div>
-          <div class = "led-off-Start"></div>
-          <div class = "led-on-Start"></div>
-          <img class = "manager-icon" src="manager.png" alt="icon to call manager">
+          <div class = "led-off-manager" id="manager-led-off"></div>
+          <div class = "led-on-manager" id="manager-led-on"></div>
+          <div class = "led-off-Stop" id="stop-led-off"></div>
+          <div class = "led-on-Stop" id="stop-led-on"></div>
+          <div class = "led-off-Start" id="start-led-off"></div>
+          <div class = "led-on-Start" id="start-led-on"></div>
+          <img class = "manager-icon" src="manager.png" alt="icon to call manager, a picture of a generic simplified man in a suit with a phone next to him">
+		</div>
       </div>
-        <div class = "flex-lights">
-          <div class="led-box">
+        <div class = "flex-lights" id="status-leds" role="status" aria-label="led array of error statuses" aria-describedby="status-icons">
+          <div class="led-box" role="status" aria-describedby="air-icon">
               <div class="led-air-red"></div>
             </div>
-          <div class = "led-box-">
+          <div class = "led-box-" role="status" aria-describedby="connection-icon">
               <div class = "led-communication-green"></div>  
             </div>
-          <div class = "led-box">
+          <div class = "led-box" role="status" aria-describedby="power-icon">
               <div class = "led-power-green"></div>  
             </div>
             
@@ -54,10 +56,10 @@ Please Wait..
           
         
         
-        <div class = "flex-icons">
-          <img class = "images" src="fan_icon.png" alt="icon for air status">
-            <img class = "images" src="connection_icon.png" alt="icon for connection status">
-          <img class = "images" src = "power_icon.png" alt="icon for power status">
+        <div class = "flex-icons" id="status-icons">
+          <img class = "images" src="fan_icon.png" id="air-icon" alt="icon for air status, a picture of a fan">
+            <img class = "images" src="connection_icon.png" id="connection-icon" alt="icon for connection status, a picture of a wifi signal">
+          <img class = "images" src = "power_icon.png" id="power-icon" alt="icon for power status, a picture of a lightning bolt">
           </div>
           
   </body>
